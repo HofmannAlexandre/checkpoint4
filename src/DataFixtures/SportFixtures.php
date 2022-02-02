@@ -10,7 +10,7 @@ class SportFixtures extends Fixture
 {
     public const NAME = [
         'Lancer de Javelot',
-        'lancer de Disque',
+        'Lancer de Disque',
         'Course',
         'Lutte',
         'Saut en Longueur',
