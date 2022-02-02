@@ -17,6 +17,7 @@ class UserFixtures extends Fixture
     {
         $user = new User();
         $user->setName('Hesiode');
+        $user->setPreference('Lancer de Javelot');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -24,6 +25,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Thebes');
+        $user->setPreference('Saut en Longueur');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -31,6 +33,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Heracles');
+        $user->setPreference('Pugilat');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -38,6 +41,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Achille');
+        $user->setPreference('Pancrace');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -45,6 +49,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Ulysse');
+        $user->setPreference('Course');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -52,6 +57,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Hector');
+        $user->setPreference('Lutte');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -59,6 +65,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Agamemnon');
+        $user->setPreference('Lancer de disque');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
@@ -66,6 +73,7 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setName('Thesee');
+        $user->setPreference('Lancer de Javelot');
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'userPassword');
         $user->setPassword($hashedPassword);
 
