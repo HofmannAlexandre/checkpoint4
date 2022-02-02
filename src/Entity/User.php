@@ -31,6 +31,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 100, nullable: true)]
     private $preference;
 
+    #[ORM\ManyToOne(targetEntity: Sport::class, inversedBy: 'users')]
+    private $sport;
+
+    #[ORM\ManyToOne(targetEntity: Vote::class, inversedBy: 'user')]
+    private $vote;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -128,6 +134,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPreference(string $preference): self
     {
         $this->preference = $preference;
+
+        return $this;
+    }
+
+    public function getSport(): ?Sport
+    {
+        return $this->sport;
+    }
+
+    public function setSport(?Sport $sport): self
+    {
+        $this->sport = $sport;
+
+        return $this;
+    }
+
+    public function getVote(): ?Vote
+    {
+        return $this->vote;
+    }
+
+    public function setVote(?Vote $vote): self
+    {
+        $this->vote = $vote;
 
         return $this;
     }
