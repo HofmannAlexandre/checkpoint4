@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participants{% endblock %}
+
+{% block body %}
+    <h1>Liste des participants avec leurs préférences </h1>
+    <ul>
+    {% for user in user %}
+            <li>{{ user.name }} : {{ user.preference }}</li>
+        {% else %}
+            <li>Aucun participant trouvé.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
