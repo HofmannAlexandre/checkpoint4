@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Tout les votes : </h1>
+{% for vote in votes %}
+<p>{{ vote.sportName }} : {{ vote.totalVote }}</p>
+{% else %}
+    Aucun vote trouvé.
+{% endfor %}
+{% endblock %}

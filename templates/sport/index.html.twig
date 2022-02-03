@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}All programs{% endblock %}
+{% block title %}Sports{% endblock %}
 
 {% block body %}
-    <h1>Toutes les séries de la table program : </h1>
+    <h1>Tout les sports pour les olympiades : </h1>
     {% for sport in sport %}
         <div>
-            <h2>{{ loop.index }} / {{ sport.name }}</h2>
+            <h2> {{ sport.name }}</h2>
               </div>
     {% else %}
         Aucun sport trouvé.

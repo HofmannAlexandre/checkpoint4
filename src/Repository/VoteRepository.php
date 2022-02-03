@@ -35,6 +35,17 @@ class VoteRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findAllGroupedWithSportName()
+    {
+        return $this->createQueryBuilder('v')
+            ->select("sum(v.vote) as totalVote, s.name as sportName")
+            ->join("v.sport", "s")
+            ->groupBy("v.sport")
+            ->orderBy('totalVote', 'DESC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
     /*
     public function findOneBySomeField($value): ?Vote
